@@ -7,6 +7,10 @@ Web API for Google Cast enabled devices, based on the [node-castv2](https://gith
 
 This API is only intended to be used on your local network **not for hosting on the public internet**.
 
+> **Fork note:** this fork runs on Node 22 and fixes Google TTS, connection leaks, reconnect storms and dead
+> callbacks, mainly for use with the SmartThings Edge driver [googlecast](https://github.com/toddaustin07/googlecast).
+> See [CHANGES-FORK.md](CHANGES-FORK.md) for details and Docker instructions.
+
 ## Installation
 You probably don't want to install the api directly. For a GUI install [cast-web-api-desktop](https://github.com/vervallsweg/cast-web-api-desktop), for headless server installation use [cast-web-api-cli](https://github.com/vervallsweg/cast-web-api-cli).
 
