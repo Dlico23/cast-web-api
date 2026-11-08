@@ -1,0 +1,15 @@
+services:
+  cast-web-api:
+    build: .
+    image: cast-web-api:local
+    container_name: cast-web-api
+    network_mode: host   # required for mDNS discovery of the cast devices
+    restart: unless-stopped
+    environment:
+      HOST_IP: 192.168.1.10   # change to the LAN address of the Docker host
+      PORT: "3000"
+    volumes:
+      - ./config:/app/config   # config.json and callbacks.json survive rebuilds
+    logging:
+      driver: json-file
+      options: { max-size: "10m", max-file: "3" }

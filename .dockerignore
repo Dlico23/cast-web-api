@@ -1,0 +1,4 @@
+.git
+node_modules
+config/callbacks.json
+docker-compose.yml
